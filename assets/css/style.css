@@ -499,6 +499,15 @@ section {
     background-color: var(--accent-color);
 }
 
+@media (max-width: 768px) {
+    #skills{
+        height: fit-content;
+    }
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
