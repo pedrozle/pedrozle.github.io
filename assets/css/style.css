@@ -508,6 +508,102 @@ section {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+/*--------------------------------------------------------------
+# projetos
+--------------------------------------------------------------*/
+
+#projects {
+    height: 400px;
+}
+
+.projects .progress {
+    height: 30px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.skill-item {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+        transition: 0.3s;
+        width: 70px;
+        height: 70px;
+        padding: 5px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent-color);
+    }
+
+    & span {
+        font-weight: bold;
+    }
+}
+
+.disabled{
+    color: gray;
+    & img{
+        filter: grayscale(100%);
+    }
+}
+
+.skill-item:hover {
+    & img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.projects .progress .skill {
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+}
+
+.projects .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.projects .progress-bar-wrap {
+    background: #dce8f8;
+    height: 10px;
+}
+
+.projects .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    #projects{
+        height: fit-content;
+    }
+    .projects-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
