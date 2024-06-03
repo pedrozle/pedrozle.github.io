@@ -9,6 +9,29 @@
 # General
 --------------------------------------------------------------*/
 
+.btn{
+    border: 1px solid #fff;
+    background-color: #040b14;
+    padding: 0px 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-send{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #040b14;
+}
+
+.btn-send:hover{
+    border: 1px solid #040b14;
+
+}
+
 :root {
     --accent-color: #5d22e9;
 }
