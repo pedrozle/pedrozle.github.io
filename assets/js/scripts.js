@@ -12,11 +12,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeLanguage(lang) {
+  const link = document.getElementById("link_curriculo");
+
+  if (lang === "pt-br") {
+    link.href = "docs/Curriculo - Joao - PT.pdf";
+  } else {
+    link.href = "docs/Curriculo - Joao - en.pdf";
+  }
+
   const elements = document.querySelectorAll("[data-translate]");
   elements.forEach((element) => {
     const key = element.getAttribute("data-translate");
     element.innerHTML = translations[lang][key];
   });
+
+  const elementsArray = Array.from(elements);
+
+  const res_desc = elementsArray.find(
+    (el) => el.getAttribute("data-translate") === "resume_description"
+  );
+  const res_desc_link = elementsArray.find(
+    (el) => el.getAttribute("data-translate") === "resume_description_link"
+  );
+
+  res_desc.innerHTML = translations[lang]["resume_description"];
+  res_desc_link.innerHTML = translations[lang]["resume_description_link"];
+
+  res_desc.appendChild(res_desc_link);
 }
 
 function enviaEmail() {
