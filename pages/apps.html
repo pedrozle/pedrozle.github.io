@@ -174,5 +174,23 @@
         </div>
       </div>
     </div>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      function enviaEmail() {
+        const name = encodeURIComponent(document.getElementById("name").value);
+        const email = "softwareore@gmail.com";
+        const subject = encodeURIComponent(
+          document.getElementById("subject").value
+        );
+        const message = encodeURIComponent(
+          document.getElementById("message").value
+        );
+
+        const mailtoLink = `mailto:${email}?subject=${subject}&body=Olá, meu nome é ${name}%0A${message}`;
+
+        window.location.href = mailtoLink;
+      }
+    </script>
+    <script type="module" src="../assets/js/scripts.js"></script>
   </body>
 </html>
