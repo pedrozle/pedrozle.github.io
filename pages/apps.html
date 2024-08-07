@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicativos por pedrozle</title>
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold mb-6">Aplicativos por Pedrozle</h1>
+      <a href="/index.html" class="mb-6">Voltar à página anterior</a>
+      <div class="flex-column gap-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+          <div class="flex items-center justify-between px-4 py-3 bg-[#18181b]">
+            <div class="flex items-center space-x-3">
+              <img
+                src="../assets/img/charvault.png"
+                width="40"
+                height="40"
+                alt="App Logo"
+                class="rounded-full"
+                style="aspect-ratio: 40 / 40; object-fit: cover"
+              />
+              <h2 class="text-lg font-medium text-white">Characters Vault</h2>
+            </div>
+            <button
+              class="bg-[#c82627] text-white ml-2 py-2 px-4 rounded"
+              type="button"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Excluir meus dados
+            </button>
+          </div>
+          <div class="p-4">
+            <p class="text-muted-foreground">
+              Aplicativo para salvar fixas de personagens de RPG
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Excluir dados do usuário
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Insira seus dados e envie-nos um email para prosseguirmos com a
+              exclusão
+            </p>
+            <div class="w-full">
+              <form role="form" class="email-form">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name" data-translate="contact_email_item_name"
+                      >Seu Nome</label
+                    >
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name" data-translate="contact_email_item_email"
+                      >Seu Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" data-translate="contact_email_item_subject"
+                    >Assunto</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="name" data-translate="contact_email_item_message"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+                <div class="text-center"></div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-send">
+              Cancelar
+            </button>
+            <button
+              onclick="enviaEmail()"
+              type="button"
+              data-translate="contact_email_item_button"
+              class="btn btn-send bg-[#c82627]"
+            >
+              Enviar mensagem
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
