@@ -1,10 +1,16 @@
 // Adicione este código no final do index.js
 document.getElementById("options").addEventListener("change", changeLanguage);
 
+window.onload = function () {
+  const lang = window.localStorage.getItem("language") || "pt";
+  document.getElementById("options").value = lang;
+  changeLanguage();
+};
+
 function changeLanguage() {
-  console.log("Changing language");
   const selectElement = document.getElementById("options");
   const lang = selectElement.value;
+  window.localStorage.setItem("language", lang);
   const link = document.getElementById("link_curriculo");
   //   if (lang === "pt-br") {
   //     link.href = "docs/Curriculo - Joao - PT.pdf";
@@ -38,6 +44,7 @@ const translations = {
     "nav-link-skills": "Habilidades",
     "nav-link-portifolio": "Portifólio",
     "nav-link-contact": "Contato",
+    "nav-link-back": "Voltar",
 
     "intro-pre": "Olá, Eu sou",
     "intro-title": "Desenvolvedor Full-stack",
@@ -47,6 +54,7 @@ const translations = {
     "nav-link-skills": "Skills",
     "nav-link-portifolio": "Portifolio",
     "nav-link-contact": "Contact",
+    "nav-link-back": "Go back",
 
     "intro-pre": "Hello, I am",
     "intro-title": "Full-stack Developer",
