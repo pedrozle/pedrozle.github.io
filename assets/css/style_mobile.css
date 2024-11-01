@@ -1,0 +1,118 @@
+@media only screen and (max-width: 425px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        min-height: 100vh;
+        max-height: 100vh;
+        background: linear-gradient(170deg, black 71.5%, white 25%);
+    }
+
+    header{
+        width: 100%;
+        background-color: red;
+
+    }
+
+    .nav-links-holder{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+    
+    .line{
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .hero {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 15%;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .mobile-intro {
+        display: block;
+        background: linear-gradient(350deg,#5e5e5edc 65.1%,rgba(255, 255, 255, 0) 40%);
+        height: 320px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .intro {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .text-intro{
+        padding: 0 0 0 10%;
+    }
+
+    .pre-intro {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .title-intro {
+        margin: 0;
+        font-size: 1em;
+        color: white;
+    }
+
+    .btn-icons {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        height: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-icon {
+        color: black;
+        text-decoration: none;
+        padding: 8px 10px;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        transition: 0.3s;
+        margin: 5px;
+
+        & svg {
+        width: 20px;
+        height: 20px;
+        }
+    }
+}
