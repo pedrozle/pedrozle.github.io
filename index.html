@@ -12,7 +12,6 @@
       sizes="32x32"
       href="assets/images/favicon.ico"
     />
-    <link rel="manifest" href="assets/images/site.webmanifest" />
   </head>
   <body>
     <header>
@@ -21,10 +20,28 @@
           <img src="assets/images/logo.png" alt="Logo Pedrozle" width="50" />
         </a>
         <div class="nav-links-holder">
-          <a class="nav-link" href="about.html">Sobre</a>
-          <a class="nav-link" href="apps.html">Habilidades</a>
-          <a class="nav-link" href="games.html">Portifólio</a>
-          <a class="nav-link" href="contact.html">Contato</a>
+          <a data-translate="nav-link-about" class="nav-link" href="about.html"
+            >Sobre</a
+          >
+          <a data-translate="nav-link-skills" class="nav-link" href="apps.html"
+            >Habilidades</a
+          >
+          <a
+            data-translate="nav-link-portifolio"
+            class="nav-link"
+            href="games.html"
+            >Portifólio</a
+          >
+          <a
+            data-translate="nav-link-contact"
+            class="nav-link"
+            href="/pages/contact.html"
+            >Contato</a
+          >
+          <select class="nav-link select" href="" id="options" name="options">
+            <option value="pt" selected>PT</option>
+            <option value="en">EN</option>
+          </select>
         </div>
         <div class="hamburger-menu">
           <div class="line"></div>
@@ -37,9 +54,11 @@
       <section class="mobile-intro"></section>
       <section class="intro">
         <div class="text-intro">
-          <p class="pre-intro">Olá, Eu sou</p>
+          <p class="pre-intro" data-translate="intro-pre">Olá, Eu sou</p>
           <h1>João Pedro</h1>
-          <p class="title-intro">Desenvolvedor Full-stack</p>
+          <p class="title-intro" data-translate="intro-title">
+            Desenvolvedor Full-stack
+          </p>
         </div>
         <div class="btn-icons">
           <a
@@ -99,5 +118,6 @@
         <img src="assets/images/hero.png" class="hero-img" alt="" />
       </section>
     </main>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

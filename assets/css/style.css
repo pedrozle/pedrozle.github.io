@@ -35,6 +35,8 @@ main{
 }
 
 .nav-link{
+    cursor: pointer
+    ;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
@@ -47,6 +49,10 @@ main{
 .nav-link:hover{
     background-color: white;
     color: black;
+}
+
+.select{
+    color: black
 }
 /* END HEADER */
 
