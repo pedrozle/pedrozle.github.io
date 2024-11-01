@@ -4,16 +4,7 @@
         padding: 0;
         margin: 0;
         height: 100vh;
-        width: 100vw;
-        min-height: 100vh;
-        max-height: 100vh;
         background: linear-gradient(170deg, black 71.5%, white 25%);
-    }
-
-    header{
-        width: 100%;
-        background-color: red;
-
     }
 
     .nav-links-holder{
@@ -70,6 +61,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 20px;
     }
 
     .text-intro{

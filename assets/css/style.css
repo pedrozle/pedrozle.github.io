@@ -3,9 +3,6 @@ body{
     padding: 0;
     margin: 0;
     height: 100vh;
-    width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
     background: linear-gradient(-80deg, black 50%, white 50%);
 }
 
