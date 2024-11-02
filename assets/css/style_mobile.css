@@ -4,7 +4,7 @@
         padding: 0;
         margin: 0;
         height: 100vh;
-        background: linear-gradient(170deg, black 71.5%, white 25%);
+        background: linear-gradient(170deg, black 71.5%, #e1e1e1 25%);
     }
 
     .nav-links-holder{
