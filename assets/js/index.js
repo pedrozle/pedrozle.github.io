@@ -42,7 +42,7 @@ const translations = {
   pt: {
     "nav-link-about": "Sobre",
     "nav-link-skills": "Habilidades",
-    "nav-link-portifolio": "Portifólio",
+    "nav-link-projects": "Projetos",
     "nav-link-contact": "Contato",
     "nav-link-back": "Voltar",
 
@@ -52,7 +52,7 @@ const translations = {
   en: {
     "nav-link-about": "About me",
     "nav-link-skills": "Skills",
-    "nav-link-portifolio": "Portifolio",
+    "nav-link-projects": "Projects",
     "nav-link-contact": "Contact",
     "nav-link-back": "Go back",
 
