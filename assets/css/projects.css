@@ -103,34 +103,34 @@ header {
 }
 
 .jotchua {
-  background: url("./../images/jotchuabot.png");
+  background: url("./../images/jotchuabot.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .zeromath {
-  background: url("./../images/zeromath.png");
+  background: url("./../images/zeromath.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .charvault {
-  background: url("./../images/charvault.png");
+  background: url("./../images/charvault.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .gamesdump {
-  background: url("./../images/gamesdump.png");
+  background: url("./../images/gamesdump.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .spotifried{
-  background: url("./../images/spotiifried.png");
+  background: url("./../images/spotiifried.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
