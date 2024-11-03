@@ -50,7 +50,7 @@ const translations = {
       João Pedro, 25, Computer Science Bachelor, Full-Stack developer <br /><br />
 
       Passionate about games and modeling, I try to stay up to date with
-      all the latest developments in the world of game development.
+      all the latest news in the world of game development.
     `,
     "about-motto": `
       "being pessimistic is less work, and it is also a way of
