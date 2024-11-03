@@ -34,8 +34,8 @@ main{
 }
 
 .nav-link{
-    cursor: pointer
-    ;
+    cursor: pointer;
+    text-shadow: 1px 1px 4px black;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
@@ -49,6 +49,8 @@ main{
     background-color: white;
     color: black;
 }
+
+
 
 .select{
     color: black
