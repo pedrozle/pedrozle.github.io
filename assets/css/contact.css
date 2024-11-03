@@ -1,72 +1,100 @@
-body{
-    background: linear-gradient(0, black 15%, white 15%);
+body {
+  background: #e1e1e1;
 }
 
-.nav-link{
-    color: white;
-    background-color: black;
+.nav-link {
+  color: white;
+  background-color: black;
 }
 
-.nav-link:hover{
-    border: 1px solid black;
+.nav-link:hover {
+  border: 1px solid black;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
 }
 
-header{
-    padding: 2% 10%;
+header {
+  padding: 2% 10%;
 }
 
-.header{
-    border: 5px solid black;
-    padding: 20px;
-    text-align: center;
-    font-size: 3em;
+.header {
+  border: 5px solid black;
+  padding: 20px;
+  text-align: center;
+  font-size: 3em;
 }
 
-form{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .separator {
-    width: 10%;
-    border-top: 1px solid #ddd;      /* Cor e espessura da linha */
-    margin: 20px 0;
-    text-align: center;
+  width: 10%;
+  border-top: 1px solid #ddd; /* Cor e espessura da linha */
+  margin: 20px 0;
+  text-align: center;
 }
 
+.form-group {
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+  padding-left: 5px;
+  padding-bottom: 5px;
 
+  & input,
+  & textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #e1e1e1;
+  }
 
-.form-group{
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
-    padding-left: 5px;
-    padding-bottom: 5px;
+  & input:focus,
+  & textarea {
+    outline: none;
+    border: none;
+  }
 
+  & textarea {
+    max-lines: 5;
+    resize: none;
+  }
+}
 
-    & input, & textarea{
-        width: 100%;
-        padding: 10px;
-        border: none;
-        font-weight: bold;
-    }
+@media only screen and (max-width: 1024px) {
+}
 
-    & input:focus, & textarea{
-        outline: none;  
-        border: none;
-    }
+@media only screen and (max-width: 768px) {
+  form {
+    width: 60%;
+  }
+}
 
-    & textarea{
-        max-lines: 5;
-        resize: none;
-    }
+@media only screen and (max-width: 425px) {
+  .nav-links-holder {
+    display: block;
+  }
 
+  header {
+    padding: 5%;
+    margin-bottom: 20px;
+  }
+
+  .contact-motto {
+    width: 80%;
+  }
+
+  form {
+    width: 70%;
+  }
 }
