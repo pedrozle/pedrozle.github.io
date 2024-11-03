@@ -135,3 +135,27 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media only screen and (max-width: 1024px) {
+  .project-item{
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  .nav-links-holder {
+    display: block;
+  }
+
+  header {
+    padding: 5%;
+    margin-bottom: 20px;
+  }
+
+
+  
+  .project-item{
+    width: 100%;
+  }
+}
