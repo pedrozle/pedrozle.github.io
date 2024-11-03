@@ -59,6 +59,13 @@ header {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+
+  & img{
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+  }
+
 }
 
 .skill-item-header {
