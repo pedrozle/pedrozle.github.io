@@ -44,7 +44,13 @@
             href="/pages/contact.html"
             >Contato</a
           >
-          <select class="nav-link select" href="" id="options" name="options">
+          <select
+            class="nav-link select"
+            href=""
+            id="options-desktop"
+            name="options"
+            onchange="changeLanguage()"
+          >
             <option value="pt" selected>PT</option>
             <option value="en">EN</option>
           </select>
@@ -96,7 +102,13 @@
           href="/pages/contact.html"
           >Contato</a
         >
-        <select class="nav-link select" href="" id="options" name="options">
+        <select
+          class="nav-link select"
+          href=""
+          id="options-mobile"
+          name="options"
+          onchange="changeLanguage(true)"
+        >
           <option value="pt" selected>PT</option>
           <option value="en">EN</option>
         </select>

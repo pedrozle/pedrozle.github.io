@@ -1,7 +1,4 @@
 // Adicione este código no final do index.js
-document.getElementById("options").addEventListener("change", changeLanguage);
-
-// document.getElementById("hambmenu").addEventListener("isOpen", openMenu);
 
 function openMenu() {
   const modal = document.getElementById("modal");
@@ -16,13 +13,16 @@ function openMenu() {
 
 window.onload = function () {
   const lang = window.localStorage.getItem("language") || "pt";
-  document.getElementById("options").value = lang;
+  document.getElementById("options-desktop").value = lang;
+  document.getElementById("options-mobile").value = lang;
   changeLanguage();
 };
 
-function changeLanguage() {
-  const selectElement = document.getElementById("options");
-  const lang = selectElement.value;
+function changeLanguage(isMobile = false) {
+  const selectElement = document.getElementsByName("options");
+  console.log(selectElement);
+
+  const lang = selectElement[isMobile ? 1 : 0].value;
   window.localStorage.setItem("language", lang);
 
   const elements = document.querySelectorAll("[data-translate]");
