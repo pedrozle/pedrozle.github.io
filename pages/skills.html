@@ -11,15 +11,19 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/images/favicon.ico"
+      href="./../assets/images/favicon.ico"
     />
   </head>
   <body>
     <header>
       <nav>
         <div class="nav-links-holder">
-          <span data-translate="nav-link-back" class="nav-link" id="back-button"
-            >Voltar</span
+          <a
+            data-translate="nav-link-back"
+            class="nav-link"
+            id="back-button"
+            href="/"
+            >Voltar</a
           >
         </div>
       </nav>
@@ -28,7 +32,10 @@
       <h1 data-translate="skills-header" class="header">HABILIDADES</h1>
       <div class="main">
         <section class="skills-content">
-          <p class="content-header" data-translate="skills-content-header">
+          <p
+            class="content-header"
+            data-translate="skills-content-header-tecnologies"
+          >
             Utilizo:
           </p>
           <div class="content-content">
@@ -107,12 +114,20 @@
           </div>
         </section>
         <section class="skills-content">
-          <p class="content-header" data-translate="skills-content-header">
+          <p
+            class="content-header"
+            data-translate="skills-content-header-languages"
+          >
             Idiomas:
           </p>
           <div class="content-content">
             <div class="skill-item">
-              <p class="skill-item-header">Português</p>
+              <p
+                class="skill-item-header"
+                data-translate="skill-item-header-pt"
+              >
+                Português
+              </p>
               <img
                 src="./../assets/images/brasil.webp"
                 width="75"
@@ -121,7 +136,12 @@
               />
             </div>
             <div class="skill-item">
-              <p class="skill-item-header">Inglês</p>
+              <p
+                class="skill-item-header"
+                data-translate="skill-item-header-en"
+              >
+                Inglês
+              </p>
               <img
                 src="./../assets/images/usa.webp"
                 width="75"
@@ -130,7 +150,12 @@
               />
             </div>
             <div class="skill-item">
-              <p class="skill-item-header">Espanhol</p>
+              <p
+                class="skill-item-header"
+                data-translate="skill-item-header-es"
+              >
+                Espanhol
+              </p>
               <img
                 src="./../assets/images/espanha.webp"
                 width="75"
@@ -142,7 +167,6 @@
         </section>
       </div>
     </main>
-    <script src="./../assets/js/index.js"></script>
-    <script src="./../assets/js/contact.js"></script>
+    <script src="./../assets/js/skills.js"></script>
   </body>
 </html>
