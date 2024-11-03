@@ -144,3 +144,29 @@
     width: 500px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .pre-intro {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .title-intro {
+    margin: 0;
+    font-size: 1em;
+    color: #a0a0a0;
+  }
+
+  .hero {
+    width: 400px;
+  }
+
+  .btn-icons{
+    margin-top: 30px;
+  }
+
+}
