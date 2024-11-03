@@ -88,3 +88,51 @@ header {
 .education-title {
   font-weight: bold;
 }
+
+@media only screen and (max-width: 1024px) {
+  main {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .nav-links-holder {
+    display: block;
+  }
+
+  header {
+    padding: 5%;
+    margin-bottom: 20px;
+  }
+
+  .content-name {
+    font-size: 1em;
+  }
+
+  .resume {
+    font-size: 1em;
+  }
+
+  .content-description {
+    width: 100%;
+  }
+
+  .main {
+    height: fit-content;
+    display: block;
+    padding: 0 10px;
+  }
+
+  .main-hero {
+    & img {
+      float: left;
+      margin: 5px;
+    }
+  }
+  .main-content {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+}
