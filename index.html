@@ -49,14 +49,58 @@
             <option value="en">EN</option>
           </select>
         </div>
-        <div class="hamburger-menu">
+        <button
+          type="button"
+          title="hamburger-menu"
+          id="hambmenu"
+          class="hamburger-menu"
+          onclick="openMenu()"
+        >
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
-        </div>
+        </button>
       </nav>
     </header>
     <main>
+      <div id="modal" class="modal closed">
+        <button
+          type="button"
+          id="close-modal"
+          class="hamburger-menu close-modal"
+          onclick="openMenu()"
+        >
+          X
+        </button>
+        <a
+          data-translate="nav-link-about"
+          class="nav-link"
+          href="./pages/about.html"
+          >Sobre</a
+        >
+        <a
+          data-translate="nav-link-skills"
+          class="nav-link"
+          href="pages/skills.html"
+          >Habilidades</a
+        >
+        <a
+          data-translate="nav-link-projects"
+          class="nav-link"
+          href="./pages/projects.html"
+          >Projetos</a
+        >
+        <a
+          data-translate="nav-link-contact"
+          class="nav-link"
+          href="/pages/contact.html"
+          >Contato</a
+        >
+        <select class="nav-link select" href="" id="options" name="options">
+          <option value="pt" selected>PT</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
       <section class="intro">
         <div class="text-intro">
           <p class="pre-intro" data-translate="intro-pre">Olá, Eu sou</p>

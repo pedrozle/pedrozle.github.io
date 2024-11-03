@@ -1,6 +1,19 @@
 // Adicione este código no final do index.js
 document.getElementById("options").addEventListener("change", changeLanguage);
 
+// document.getElementById("hambmenu").addEventListener("isOpen", openMenu);
+
+function openMenu() {
+  const modal = document.getElementById("modal");
+  if (modal.classList.contains("open")) {
+    modal.classList.remove("open");
+    modal.classList.add("closed");
+  } else {
+    modal.classList.remove("closed");
+    modal.classList.add("open");
+  }
+}
+
 window.onload = function () {
   const lang = window.localStorage.getItem("language") || "pt";
   document.getElementById("options").value = lang;
