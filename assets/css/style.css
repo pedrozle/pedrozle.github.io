@@ -31,7 +31,6 @@ main{
 .nav-links-holder{
     display: flex;
     justify-content: space-between;
-    width: 40%;
 }
 
 .nav-link{
