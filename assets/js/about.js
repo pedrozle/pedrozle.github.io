@@ -10,7 +10,7 @@ function changeLanguage() {
   if (lang === "pt") {
     link.href = "./../docs/Curriculo - Joao - PT.pdf";
   } else {
-    link.href = "./../docs/Curriculo - Joao - en.pdf";
+    link.href = "./../docs/Curriculo - Joao - EN.pdf";
   }
 
   const elements = document.querySelectorAll("[data-translate]");
