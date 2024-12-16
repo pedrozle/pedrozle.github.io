@@ -57,45 +57,93 @@ header {
   justify-content: center;
   width: 25%;
   height: 300px;
+  position: relative;
 }
 
 .project-item:hover {
   & .project-item-content {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     & p,
-    a {
+    a,
+    .skill-item {
       display: block;
     }
   }
 }
 
 .project-item-content {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   transition: 0.3s;
   color: white;
 
-  & p,a {
+  & p,
+  a {
     display: none;
   }
 }
 
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
 .item-title {
   font-size: 2em;
-  margin: 5px;
+  margin: 1px;
   font-weight: bold;
 }
 
 .item-description {
   color: rgba(255, 255, 255, 0.692);
+  margin: 1px;
 }
 
-.item-disclaimer {
-  font-style: italic;
+.techs {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+
+.skill-item {
+  margin-top: 20px;
+  display: none;
+  position: relative;
+
+  & img {
+    width: 30px;
+    object-fit: contain;
+  }
+}
+
+.skill-item:hover {
+  & .tooltip {
+    display: block;
+  }
+}
+
+.tooltip {
+  top: -40px;
+  left: -10px;
+  position: absolute;
+  background: #000;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
 }
 
 .project-link {
@@ -129,7 +177,7 @@ header {
   background-repeat: no-repeat;
 }
 
-.spotifried{
+.spotifried {
   background: url("./../images/spotiifried.webp");
   background-size: cover;
   background-position: center;
@@ -137,10 +185,9 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-  .project-item{
+  .project-item {
     width: 50%;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
@@ -153,9 +200,7 @@ header {
     margin-bottom: 20px;
   }
 
-
-  
-  .project-item{
+  .project-item {
     width: 100%;
   }
 }
