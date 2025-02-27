@@ -8,9 +8,9 @@ window.onload = function () {
 function changeLanguage() {
   const link = document.getElementById("link_curriculo");
   if (lang === "pt") {
-    link.href = "./../docs/Curriculo - Joao - PT.pdf";
+    link.href = "./../docs/cv_pt_joao.pdf";
   } else {
-    link.href = "./../docs/Curriculo - Joao - EN.pdf";
+    link.href = "./../docs/cv_en_joao.pdf";
   }
 
   const elements = document.querySelectorAll("[data-translate]");
