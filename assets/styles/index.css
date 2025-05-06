@@ -89,7 +89,6 @@ p {
   }
 }
 
-
 @keyframes shine {
   0% {
     left: -100%;
@@ -129,7 +128,36 @@ p {
 
 /* MAIN CONTENT */
 main {
-  padding: 5em;
+  padding: 3em 5em;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(199, 199, 199);
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: black;
+
+  & .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & .curPage {
+      font-weight: bold;
+    }
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }
 
 .card-container {
@@ -155,6 +183,15 @@ main {
     }
     & .subtitle {
       color: gray;
+      margin-bottom: 20px;
+    }
+
+    & .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
     }
   }
 }
