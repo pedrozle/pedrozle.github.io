@@ -17,7 +17,9 @@ time.innerHTML = now.toLocaleTimeString("pt-BR", {
   minute: "2-digit",
 });
 
-cover.addEventListener("click", () => {
+cover.addEventListener("click", unlock);
+
+function unlock() {
   cover.style.transform = "translateY(-100%)";
 
   cover.addEventListener(
@@ -27,4 +29,4 @@ cover.addEventListener("click", () => {
     },
     { once: true }
   );
-});
+}

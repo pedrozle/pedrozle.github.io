@@ -8,15 +8,53 @@
   </head>
   <body>
     <!-- COVER (inicial, que desliza para cima ao clicar) -->
-    <!-- <div id="cover" class="cover">
+    <div id="cover" class="cover">
       <div class="bg">
         <div class="info">
           <p id="date">Segunda Feira, 05 de maio de 2025</p>
           <p id="time">20:23</p>
-          <p id="label">Acessar portfólio <img src="assets/img/rarrow.svg" alt=""></p>
+          <div class="links">
+            <a
+              href="https://twitter.com/pedrozle"
+              target="_blank"
+              class="btn-circle"
+            >
+              <img
+                src="assets/img/twitter.webp"
+                width="50"
+                height="50"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://instagram.com/pedrozle"
+              target="_blank"
+              class="btn-circle"
+            >
+              <img
+                src="assets/img/instagram.webp"
+                width="50"
+                height="50"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://linkedin.com/in/pedrozle"
+              target="_blank"
+              class="btn-circle"
+            >
+              <img
+                src="assets/img/linkedin.webp"
+                width="50"
+                height="50"
+                alt=""
+              />
+            </a>
+          </div>
+          <p class="unlock">Clique para desbloquear</p>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- CONTEÚDO PRINCIPAL (fica escondido até o cover sumir) -->
     <main>
@@ -48,28 +86,102 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div class="card skills">
           <div class="content">
             <p class="title">Habilidades</p>
-            <div class="circle"></div>
+            <div class="carousel-container">
+              <div class="carousel">
+                <div class="track" id="track">
+                  <img src="assets/img/angular-icon.svg" alt="" />
+                  <img src="assets/img/react.svg" alt="" />
+                  <img src="assets/img/ts.svg" alt="" />
+                  <img src="assets/img/python.svg" alt="" />
+                  <img src="assets/img/css.svg" alt="" />
+                  <img src="assets/img/html.svg" alt="" />
+                  <img src="assets/img/flutter-icon.svg" alt="" />
+                  <img src="assets/img/git.svg" alt="" />
+                  <img src="assets/img/node.svg" alt="" />
+                  <img src="assets/img/java.svg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card">
           <div class="content">
             <p class="title">Projetos</p>
-            <p class="subtitle">Desenvolvedor e Cientista de Dados</p>
+            <div class="projects">
+              <div class="project">
+                <img src="assets/img/jotchuabot.webp" alt="" />
+                <div class="project-data">
+                  <p class="project-title">Jotchua Bot</p>
+                  <a
+                    class="btn capsule"
+                    href="https://pedrozle.github.io/jotchua-bot/"
+                    target="_blank"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+              <div class="project">
+                <img src="assets/img/zeromath.webp" alt="" />
+                <div class="project-data">
+                  <p class="project-title">ZeroMath</p>
+                  <a
+                    class="btn capsule"
+                    href="https://ore-software-hub.github.io/landing-page/projects/zeromath/index.html"
+                    target="_blank"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+              <div class="project">
+                <img src="assets/img/charvault.webp" alt="" />
+                <div class="project-data">
+                  <p class="project-title">Characters Vaul</p>
+                  <a
+                    class="btn capsule"
+                    href="https://ore-software-hub.github.io/landing-page/projects/char-vault/index.html"
+                    target="_blank"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
-<!-- <a
-              data-translate="about-download-link"
-              id="link_curriculo"
-              class="btn"
-              href="./../docs/Curriculo - Joao - PT.pdf"
-              target="_blank"
-              >Baixar currículo</a
-            > -->
+
     <script src="assets/js/index.js"></script>
+    <script>
+      const track = document.getElementById("track");
+
+      // Clone os filhos para repetir o conteúdo
+      const cloneTrack = () => {
+        const items = Array.from(track.children);
+        items.forEach((item) => {
+          const clone = item.cloneNode(true);
+          track.appendChild(clone);
+        });
+      };
+
+      cloneTrack(); // Clona uma vez — pode repetir mais se quiser mais "buffer"
+
+      // Inicia o scroll infinito
+      let scrollPos = 0;
+      const speed = 0.2; // Velocidade do scroll
+
+      function animate() {
+        scrollPos += speed;
+        if (scrollPos >= track.scrollWidth / 2) {
+          scrollPos = 0; // Reinicia quando chegar na metade (porque duplicamos)
+        }
+        track.style.transform = `translateX(-${scrollPos}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    </script>
   </body>
 </html>

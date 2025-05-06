@@ -12,6 +12,14 @@ p {
   margin: 0;
 }
 
+.btn {
+  color: white;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
 /* COVER */
 .cover {
   position: absolute;
@@ -47,16 +55,64 @@ p {
   font-size: 4em;
 }
 
-#label {
+.links {
   display: flex;
-  font-size: 1.5em;
-  align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-#label img {
-  width: 20px;
-  animation: bouncy infinite 2s;
+.unlock {
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(196, 196, 196);
+  background: linear-gradient(
+    120deg,
+    rgb(196, 196, 196) 0%,
+    #ffffff 40%,
+    #f0f0f0 50%,
+    #ffffff 60%,
+    rgb(196, 196, 196) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* color: transparent; */
+  -webkit-text-fill-color: transparent;
+  animation: shine-text 2s linear infinite;
+}
+
+@keyframes shine-text {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.btn-circle {
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+
+  & img {
+    width: 100%;
+    object-fit: scale-down;
+  }
 }
 
 @keyframes bouncy {
@@ -143,15 +199,79 @@ main {
   color: gray;
 }
 
-.btn {
-  color: white;
-  padding: 20px;
-  background-color: black;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
+/* SKILLS */
+
+.skills .content {
+  height: 100%;
 }
 
-.circle{
-  
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: none;
+}
+
+.track img {
+  width: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: flex;
+  gap: 10px;
+}
+
+.project {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & .project-data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    & .project-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+}
+
+.capsule {
+  border-radius: 50px;
+  padding: 5px 10px;
 }
