@@ -215,11 +215,12 @@ main {
 /* ABOUT */
 
 .content-title {
-  margin: 5px 0 30px 0;
+  /* margin: 5px 0 30px 0; */
   font-weight: bold;
   color: gray;
   margin-top: 20px;
   align-self: center;
+  max-width: 250px;
 }
 
 .content-education {
