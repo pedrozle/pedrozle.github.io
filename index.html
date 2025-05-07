@@ -51,7 +51,9 @@
               />
             </a>
           </div>
-          <p class="unlock">Clique para desbloquear</p>
+          <p class="unlock" data-translate="unlock-text">
+            Clique para desbloquear
+          </p>
         </div>
       </div>
     </div>
@@ -65,11 +67,33 @@
             alt=""
             style="width: 20px; object-fit: scale-down"
           />
-          <p class="curPage">Portifólio de Pedrozle</p>
-          <a href="docs/CV_Pt.pdf" target="_blank">currículo</a>
-          <a href="/">projetos</a>
+          <p class="curPage" data-translate="header-cur-page">
+            Portifólio de Pedrozle
+          </p>
+          <a href="docs/CV_Pt.pdf" target="_blank" data-translate="header-link1"
+            >currículo</a
+          >
+          <a href="/" data-translate="header-link2">projetos</a>
+          <select
+            class="nav-link select"
+            href=""
+            id="options"
+            name="options"
+            onchange="changeLanguage()"
+          >
+            <option value="pt" selected data-translate="header-lang-pt">
+              português
+            </option>
+            <option value="en" data-translate="header-lang-en">inglês</option>
+          </select>
         </div>
         <div class="content">
+          <img
+            src="assets/img/lock.svg"
+            alt=""
+            style="width: 20px; object-fit: scale-down; cursor: pointer;"
+            onclick="lock()"
+          />
           <img
             src="assets/img/wifi-svgrepo-com.svg"
             alt=""
@@ -84,8 +108,10 @@
           <img src="assets/img/hero.webp" alt="" />
           <div class="content">
             <p class="title">João Pedro</p>
-            <p class="subtitle">Desenvolvedor e Cientista de Dados</p>
-            <p class="content-title">
+            <p class="subtitle" data-translate="profile-subtitle">
+              Desenvolvedor e Cientista de Dados
+            </p>
+            <p class="content-title" data-translate="profile-motto">
               "ser pessimista dá menos trabalho, e também é uma maneira de
               autopreservação" - José Carlos, 2023
             </p>
@@ -93,15 +119,25 @@
         </div>
         <div class="card about">
           <div class="content">
-            <p class="title">Sobre</p>
-            <p class="subtitle">Desenvolvedor e Cientista de Dados</p>
-            <p>Bacharel em Ciência da Computação, desenvolvedor Full-stack</p>
+            <p class="title" data-translate="about-title">Sobre</p>
+            <p class="subtitle" data-translate="about-subtitle">
+              Desenvolvedor e Cientista de Dados
+            </p>
+            <p data-translate="about-self-title">
+              Bacharel em Ciência da Computação, desenvolvedor Full-stack
+            </p>
             <div class="content-education">
-              <p class="education-title">Formação</p>
-              <p>Ciência da Computação - Universidade Federal de Rondônia</p>
-              <p>Ciência de Dados - Faculdade Focus</p>
+              <p class="education-title" data-translate="education-title">
+                Formação
+              </p>
+              <p data-translate="education-elem-1">
+                Ciência da Computação - Universidade Federal de Rondônia
+              </p>
+              <p data-translate="education-elem-2">
+                Ciência de Dados - Faculdade Focus
+              </p>
             </div>
-            <p>
+            <p data-translate="about-motto">
               Apaixonado por jogos e por modelagens, procuro estar antenado em
               todas as novidades no mundo do desenvolvimento de jogos.
             </p>
@@ -109,7 +145,7 @@
         </div>
         <div class="card skills">
           <div class="content">
-            <p class="title">Habilidades</p>
+            <p class="title" data-translate="skills-title">Habilidades</p>
             <div class="carousel-container">
               <div class="carousel">
                 <div class="track" id="track">
@@ -130,7 +166,7 @@
         </div>
         <div class="card">
           <div class="content">
-            <p class="title">Projetos</p>
+            <p class="title" data-translate="projects-title">Projetos</p>
             <div class="projects">
               <div class="project">
                 <img src="assets/img/jotchuabot.webp" alt="" />
@@ -140,6 +176,7 @@
                     class="btn capsule"
                     href="https://pedrozle.github.io/jotchua-bot/"
                     target="_blank"
+                    data-translate="btn-know-more"
                     >Saiba mais</a
                   >
                 </div>
@@ -152,6 +189,7 @@
                     class="btn capsule"
                     href="https://ore-software-hub.github.io/landing-page/projects/zeromath/index.html"
                     target="_blank"
+                    data-translate="btn-know-more"
                     >Saiba mais</a
                   >
                 </div>
@@ -164,6 +202,7 @@
                     class="btn capsule"
                     href="https://ore-software-hub.github.io/landing-page/projects/char-vault/index.html"
                     target="_blank"
+                    data-translate="btn-know-more"
                     >Saiba mais</a
                   >
                 </div>
@@ -173,7 +212,7 @@
         </div>
         <div class="card">
           <div class="content">
-            <p class="title">Contato</p>
+            <p class="title" data-translate="contact-title">Contato</p>
             <div class="container">
               <a
                 href="mailto:pedrozle@outlook.com"
@@ -211,9 +250,13 @@
         </div>
         <div class="card">
           <div class="content">
-            <p class="title">Documentos</p>
+            <p class="title" data-translate="documents-title">Documentos</p>
             <div class="container">
-              <a class="btn" href="docs/CV_Pt.pdf" target="_blank"
+              <a
+                class="btn"
+                href="docs/CV_Pt.pdf"
+                target="_blank"
+                data-translate="btn-download-curriculum"
                 >Baixar currículo</a
               >
             </div>
