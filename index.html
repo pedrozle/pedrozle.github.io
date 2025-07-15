@@ -3,297 +3,463 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedrozle</title>
+    <title>João Pedro - Full Stack, Cientista de Dados & DevOps</title>
+    <meta
+      name="description"
+      content="Portfólio de João Pedro, Desenvolvedor Full Stack, Cientista de Dados e Engenheiro DevOps"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/styles/index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- COVER (inicial, que desliza para cima ao clicar) -->
-    <div id="cover" class="cover">
-      <div class="bg">
-        <div class="info">
-          <p id="date">Segunda Feira, 05 de maio de 2025</p>
-          <p id="time">20:23</p>
-          <div class="links">
-            <a
-              href="https://twitter.com/pedrozle"
-              target="_blank"
-              class="btn-circle"
-            >
-              <img
-                src="assets/img/twitter.webp"
-                width="50"
-                height="50"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://instagram.com/pedrozle"
-              target="_blank"
-              class="btn-circle"
-            >
-              <img
-                src="assets/img/instagram.webp"
-                width="50"
-                height="50"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://linkedin.com/in/pedrozle"
-              target="_blank"
-              class="btn-circle"
-            >
-              <img
-                src="assets/img/linkedin.webp"
-                width="50"
-                height="50"
-                alt=""
-              />
-            </a>
-          </div>
-          <p class="unlock" data-translate="unlock-text">
-            Clique para desbloquear
-          </p>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="loading-bar-container">
+          <div class="loading-bar-bg"></div>
+          <div class="loading-bar" id="loading-bar"></div>
+          <div class="loading-glow" id="loading-glow"></div>
         </div>
+        <div class="loading-percentage" id="loading-percentage">0%</div>
+        <div class="loading-text">Loading...</div>
       </div>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL (fica escondido até o cover sumir) -->
-    <main>
-      <div class="header">
-        <div class="content">
-          <img
-            src="assets/img/favicon.ico"
-            alt=""
-            style="width: 20px; object-fit: scale-down"
-          />
-          <p class="curPage" data-translate="header-cur-page">
-            Portifólio de Pedrozle
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo"
+          >João Pedro<span class="accent">.</span></a
+        >
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">Sobre</a>
+          <a href="#services" class="nav-link">Serviços</a>
+          <a href="#work" class="nav-link">Projetos</a>
+          <a href="#contact" class="nav-link">Contato</a>
+          <a
+            href="docs/CV_Pt.pdf"
+            target="_blank"
+            class="nav-icon"
+            aria-label="Currículo"
+          >
+            <i class="fas fa-file-text"></i>
+          </a>
+          <a
+            href="https://github.com/pedrozle"
+            target="_blank"
+            class="nav-icon"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/pedrozle"
+            target="_blank"
+            class="nav-icon"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="mobile-nav">
+          <a
+            href="docs/CV_Pt.pdf"
+            target="_blank"
+            class="nav-icon"
+            aria-label="Currículo"
+          >
+            <i class="fas fa-file-text"></i>
+          </a>
+          <a
+            href="https://github.com/pedrozle"
+            target="_blank"
+            class="nav-icon"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/pedrozle"
+            target="_blank"
+            class="nav-icon"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">Sobre</a>
+        <a href="#services" class="mobile-link">Serviços</a>
+        <a href="#work" class="mobile-link">Projetos</a>
+        <a href="#contact" class="mobile-link">Contato</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Olá! Sou João Pedro</h1>
+          <h2 class="hero-subtitle">
+            👨‍💻 Desenvolvedor Full Stack | Cientista de Dados | Engenheiro DevOps
+          </h2>
+          <div class="hero-buttons">
+            <a href="#work" class="btn btn-primary">Ver Projetos</a>
+            <a href="#contact" class="btn btn-outline">Contato</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="gradient-text">Code, Dados & DevOps</span>
+          <span class="emoji">⚙️📊</span>
+        </h2>
+        <div class="profile-section">
+          <div class="profile-image">
+            <img src="assets/img/hero.webp" alt="João Pedro" />
+          </div>
+          <div class="profile-content">
+            <p class="mobile-description">
+              Cientista da Computação pela UNIR, Full Stack, Cientista de Dados
+              e Engenheiro DevOps. Fundador da Ore Software – Ore Labs & Ore
+              Studios.
+            </p>
+            <div class="desktop-description">
+              <p><strong>🚀 Prazer, sou João Pedro!</strong></p>
+              <p>
+                Graduado em Ciência da Computação (UNIR), com atuação
+                diversificada em <strong>Desenvolvimento Full Stack</strong>,
+                <strong>Ciência de Dados</strong> e
+                <strong>Engenharia DevOps</strong>.
+              </p>
+              <p>
+                Como fundador da <strong>Ore Software</strong>, lidero duas
+                frentes: <em>Ore Labs</em> (SaaS, ERPs, sistemas web) e
+                <em>Ore Studios</em> (jogos digitais). Entre meus projetos,
+                destacam-se o jogo <em>Characters Vault</em> e o SaaS
+                <em>MinhaReserva</em>.
+              </p>
+              <p>
+                Meus dias são cheios de código, dados e automação — e minhas
+                noites imersas em pipelines, modelos e deploys. Vamos
+                transformar ideias em soluções reais!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <h3 class="subsection-title">
+            <span class="gradient-text">Tech Stack</span>
+            <span class="emoji">🧠💾</span>
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Linguagens</h4>
+              <!-- Altere percentuais conforme seu nível -->
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>JavaScript</span><span>90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>Python</span><span>85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>TypeScript</span><span>80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>SQL</span><span>75%</span></div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Frameworks / Libraries</h4>
+              <div class="skill-bar">
+                <div class="skill-info"><span>React</span><span>95%</span></div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="95"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>Node.js</span><span>85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>Express.js</span><span>80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Flask</span><span>70%</span></div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="70"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>DevOps & Ferramentas</h4>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Git</span><span>98%</span></div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="98"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>Docker</span><span>90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span>Kubernetes</span><span>80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>CI/CD</span><span>85%</span></div>
+                <div class="skill-progress">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="gradient-text">Serviços</span>
+          <span class="emoji">🛠️</span>
+        </h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-code"></i></div>
+            <h3>Desenvolvimento Full Stack</h3>
+            <p>
+              Soluções web completas com React, Node.js, APIs, bancos de dados e
+              UI/UX.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+            <h3>Ciência de Dados</h3>
+            <p>
+              Análise de dados, machine learning, dashboards e insights
+              estratégicos.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fab fa-docker"></i></div>
+            <h3>DevOps & Infraestrutura</h3>
+            <p>
+              Containers, Kubernetes, pipelines CI/CD e infraestrutura
+              automatizada.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>API & Integrações</h3>
+            <p>
+              APIs REST/GraphQL, integrações externas, webhook, microserviços
+              robustos.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-search"></i></div>
+            <h3>Consultoria Técnica</h3>
+            <p>
+              Arquitetura, stack selection, escalabilidade e otimização de
+              performance.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>DataOps & Automação</h3>
+            <p>
+              Pipelines de dados, ETLs, monitoramento e automação de rotinas
+              analíticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="gradient-text">Projetos</span>
+          <span class="emoji">🏗️</span>
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Jotchua Bot</h3>
+            <p>
+              Bot interativo para o aplicativo Discord
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Bot</span>
+              <span class="tag">Discord</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Zeromath</h3>
+            <p>
+              Aplicativo matemático voltado para o auxílio no ensino de Métodos
+              Numéricos
+            </p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span><span class="tag">Ensino</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Characters Vault</h3>
+            <p>
+              Jogo digital para criação/coleta de personagens com backend
+              escalável.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">GameDev</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="gradient-text">Contato</span>
+          <span class="emoji">📬</span>
+        </h2>
+        <div class="contact-content">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label
+              ><input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label
+              ><input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label
+              ><textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Enviar Mensagem
+            </button>
+          </form>
+          <div class="contact-links">
+            <p>Quer agendar um papo?</p>
+            <div class="contact-buttons">
+              <a href="docs/CV_Pt.pdf" target="_blank" class="btn btn-secondary"
+                ><i class="fas fa-file-text"></i> Ver Currículo</a
+              >
+              <a href="mailto:pedrozle@outlook.com" class="btn btn-secondary"
+                ><i class="fas fa-envelope"></i> Enviar e-mail</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://github.com/pedrozle"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/pedrozle"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/pedrozle"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+        <div class="footer-text">
+          <p>
+            &copy; <span id="current-year"></span> João Pedro. Todos os direitos
+            reservados.
           </p>
-          <a href="docs/CV_Pt.pdf" target="_blank" data-translate="header-link1"
-            >currículo</a
+          <a href="mailto:pedrozle@outlook.com" class="email-link"
+            >pedrozle@outlook.com</a
           >
-          <a href="/" data-translate="header-link2">projetos</a>
-          <select
-            class="nav-link select"
-            href=""
-            id="options"
-            name="options"
-            onchange="changeLanguage()"
-          >
-            <option value="pt" selected data-translate="header-lang-pt">
-              português
-            </option>
-            <option value="en" data-translate="header-lang-en">inglês</option>
-          </select>
-        </div>
-        <div class="content">
-          <img
-            src="assets/img/lock.svg"
-            alt=""
-            style="width: 20px; object-fit: scale-down; cursor: pointer;"
-            onclick="lock()"
-          />
-          <img
-            src="assets/img/wifi-svgrepo-com.svg"
-            alt=""
-            style="width: 20px; object-fit: scale-down"
-          />
-          <p id="dater"></p>
-          <p id="timer"></p>
         </div>
       </div>
-      <div class="card-container">
-        <div class="card profile">
-          <img src="assets/img/hero.webp" alt="" />
-          <div class="content">
-            <p class="title">João Pedro</p>
-            <p class="subtitle" data-translate="profile-subtitle">
-              Desenvolvedor e Cientista de Dados
-            </p>
-            <p class="content-title" data-translate="profile-motto">
-              "ser pessimista dá menos trabalho, e também é uma maneira de
-              autopreservação" - José Carlos, 2023
-            </p>
-          </div>
-        </div>
-        <div class="card about">
-          <div class="content">
-            <p class="title" data-translate="about-title">Sobre</p>
-            <p class="subtitle" data-translate="about-subtitle">
-              Desenvolvedor e Cientista de Dados
-            </p>
-            <p data-translate="about-self-title">
-              Bacharel em Ciência da Computação, desenvolvedor Full-stack
-            </p>
-            <div class="content-education">
-              <p class="education-title" data-translate="education-title">
-                Formação
-              </p>
-              <p data-translate="education-elem-1">
-                Ciência da Computação - Universidade Federal de Rondônia
-              </p>
-              <p data-translate="education-elem-2">
-                Ciência de Dados - Faculdade Focus
-              </p>
-            </div>
-            <p data-translate="about-motto">
-              Apaixonado por jogos e por modelagens, procuro estar antenado em
-              todas as novidades no mundo do desenvolvimento de jogos.
-            </p>
-          </div>
-        </div>
-        <div class="card skills">
-          <div class="content">
-            <p class="title" data-translate="skills-title">Habilidades</p>
-            <div class="carousel-container">
-              <div class="carousel">
-                <div class="track" id="track">
-                  <img src="assets/img/angular-icon.svg" alt="" />
-                  <img src="assets/img/react.svg" alt="" />
-                  <img src="assets/img/ts.svg" alt="" />
-                  <img src="assets/img/python.svg" alt="" />
-                  <img src="assets/img/css.svg" alt="" />
-                  <img src="assets/img/html.svg" alt="" />
-                  <img src="assets/img/flutter-icon.svg" alt="" />
-                  <img src="assets/img/git.svg" alt="" />
-                  <img src="assets/img/node.svg" alt="" />
-                  <img src="assets/img/java.svg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            <p class="title" data-translate="projects-title">Projetos</p>
-            <div class="projects">
-              <div class="project">
-                <img src="assets/img/jotchuabot.webp" alt="" />
-                <div class="project-data">
-                  <p class="project-title">Jotchua Bot</p>
-                  <a
-                    class="btn capsule"
-                    href="https://pedrozle.github.io/jotchua-bot/"
-                    target="_blank"
-                    data-translate="btn-know-more"
-                    >Saiba mais</a
-                  >
-                </div>
-              </div>
-              <div class="project">
-                <img src="assets/img/zeromath.webp" alt="" />
-                <div class="project-data">
-                  <p class="project-title">ZeroMath</p>
-                  <a
-                    class="btn capsule"
-                    href="https://ore-software-hub.github.io/landing-page/projects/zeromath/index.html"
-                    target="_blank"
-                    data-translate="btn-know-more"
-                    >Saiba mais</a
-                  >
-                </div>
-              </div>
-              <div class="project">
-                <img src="assets/img/charvault.webp" alt="" />
-                <div class="project-data">
-                  <p class="project-title">Characters Vaul</p>
-                  <a
-                    class="btn capsule"
-                    href="https://ore-software-hub.github.io/landing-page/projects/char-vault/index.html"
-                    target="_blank"
-                    data-translate="btn-know-more"
-                    >Saiba mais</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            <p class="title" data-translate="contact-title">Contato</p>
-            <div class="container">
-              <a
-                href="mailto:pedrozle@outlook.com"
-                target="_blank"
-                class="btn-circle"
-              >
-                <img src="assets/img/email.png" width="50" height="50" alt="" />
-              </a>
-              <a
-                href="https://twitter.com/pedrozle"
-                target="_blank"
-                class="btn-circle"
-              >
-                <img
-                  src="assets/img/twitter.webp"
-                  width="50"
-                  height="50"
-                  alt=""
-                />
-              </a>
-              <a
-                href="https://linkedin.com/in/pedrozle"
-                target="_blank"
-                class="btn-circle"
-              >
-                <img
-                  src="assets/img/linkedin.webp"
-                  width="50"
-                  height="50"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            <p class="title" data-translate="documents-title">Documentos</p>
-            <div class="container">
-              <a
-                class="btn"
-                href="docs/CV_Pt.pdf"
-                target="_blank"
-                data-translate="btn-download-curriculum"
-                >Baixar currículo</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </footer>
 
     <script src="assets/js/index.js"></script>
-    <script>
-      const track = document.getElementById("track");
-
-      // Clone os filhos para repetir o conteúdo
-      const cloneTrack = () => {
-        const items = Array.from(track.children);
-        items.forEach((item) => {
-          const clone = item.cloneNode(true);
-          track.appendChild(clone);
-        });
-      };
-
-      cloneTrack(); // Clona uma vez — pode repetir mais se quiser mais "buffer"
-
-      // Inicia o scroll infinito
-      let scrollPos = 0;
-      const speed = 0.2; // Velocidade do scroll
-
-      function animate() {
-        scrollPos += speed;
-        if (scrollPos >= track.scrollWidth / 2) {
-          scrollPos = 0; // Reinicia quando chegar na metade (porque duplicamos)
-        }
-        track.style.transform = `translateX(-${scrollPos}px)`;
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    </script>
   </body>
 </html>
