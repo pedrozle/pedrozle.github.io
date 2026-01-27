@@ -1,465 +1,433 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João Pedro - Full Stack, Cientista de Dados & DevOps</title>
-    <meta
-      name="description"
-      content="Portfólio de João Pedro, Desenvolvedor Full Stack, Cientista de Dados e Engenheiro DevOps"
-    />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/index.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-      <div class="loading-container">
-        <div class="loading-bar-container">
-          <div class="loading-bar-bg"></div>
-          <div class="loading-bar" id="loading-bar"></div>
-          <div class="loading-glow" id="loading-glow"></div>
-        </div>
-        <div class="loading-percentage" id="loading-percentage">0%</div>
-        <div class="loading-text">Loading...</div>
-      </div>
-    </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>João Pedro Nascimento Silveira | DevOps & Full-Stack</title>
+  <meta name="description" content="DevOps Engineer and Full-Stack Developer — portfolio, projects, experience, and contact." />
 
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="João Pedro Nascimento Silveira | Portfolio" />
+  <meta property="og:description" content="DevOps Engineer and Full-Stack Developer — projects, experience, and contact." />
+  <meta property="og:type" content="website" />
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo"
-          >João Pedro<span class="accent">.</span></a
-        >
-        <div class="nav-menu" id="nav-menu">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">Sobre</a>
-          <a href="#services" class="nav-link">Serviços</a>
-          <a href="#work" class="nav-link">Projetos</a>
-          <a href="#contact" class="nav-link">Contato</a>
-          <a
-            href="docs/CV_Pt.pdf"
-            target="_blank"
-            class="nav-icon"
-            aria-label="Currículo"
-          >
-            <i class="fas fa-file-text"></i>
-          </a>
-          <a
-            href="https://github.com/pedrozle"
-            target="_blank"
-            class="nav-icon"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/pedrozle"
-            target="_blank"
-            class="nav-icon"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <div class="mobile-nav">
-          <a
-            href="docs/CV_Pt.pdf"
-            target="_blank"
-            class="nav-icon"
-            aria-label="Currículo"
-          >
-            <i class="fas fa-file-text"></i>
-          </a>
-          <a
-            href="https://github.com/pedrozle"
-            target="_blank"
-            class="nav-icon"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/pedrozle"
-            target="_blank"
-            class="nav-icon"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <button class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <div class="mobile-menu" id="mobile-menu">
-        <a href="#home" class="mobile-link">Home</a>
-        <a href="#about" class="mobile-link">Sobre</a>
-        <a href="#services" class="mobile-link">Serviços</a>
-        <a href="#work" class="mobile-link">Projetos</a>
-        <a href="#contact" class="mobile-link">Contato</a>
+  <link rel="stylesheet" href="assets/styles/index.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>JP</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" data-navlinks>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#certs" data-i18n="nav.certs">Certificates</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <button class="lang-btn" type="button" data-lang aria-label="Toggle language">
+          <span class="lang-text">EN</span>
+        </button>
+        <button class="theme-btn" type="button" data-theme>
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-text" data-i18n="nav.theme">Theme</span>
+        </button>
       </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Olá! Sou João Pedro</h1>
-          <h2 class="hero-subtitle">
-            👨‍💻 Desenvolvedor Full Stack | Cientista de Dados | Engenheiro DevOps
-          </h2>
-          <div class="hero-buttons">
-            <a href="#work" class="btn btn-primary">Ver Projetos</a>
-            <a href="#contact" class="btn btn-outline">Contato</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="gradient-text">Code, Dados & DevOps</span>
-          <span class="emoji">⚙️📊</span>
-        </h2>
-        <div class="profile-section">
-          <div class="profile-image">
-            <img src="assets/img/hero.webp" alt="João Pedro" />
-          </div>
-          <div class="profile-content">
-            <p class="mobile-description">
-              Cientista da Computação pela UNIR, Full Stack, Cientista de Dados
-              e Engenheiro DevOps. Fundador da Ore Software – Ore Labs & Ore
-              Studios.
-            </p>
-            <div class="desktop-description">
-              <p><strong>🚀 Prazer, sou João Pedro!</strong></p>
-              <p>
-                Graduado em Ciência da Computação (UNIR), com atuação
-                diversificada em <strong>Desenvolvimento Full Stack</strong>,
-                <strong>Ciência de Dados</strong> e
-                <strong>Engenharia DevOps</strong>.
-              </p>
-              <p>
-                Como fundador da <strong>Ore Software</strong>, lidero duas
-                frentes: <em>Ore Labs</em> (SaaS, ERPs, sistemas web) e
-                <em>Ore Studios</em> (jogos digitais). Entre meus projetos,
-                destacam-se o jogo <em>Characters Vault</em> e o SaaS
-                <em>MinhaReserva</em>.
-              </p>
-              <p>
-                Meus dias são cheios de código, dados e automação — e minhas
-                noites imersas em pipelines, modelos e deploys. Vamos
-                transformar ideias em soluções reais!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="skills-section">
-          <h3 class="subsection-title">
-            <span class="gradient-text">Tech Stack</span>
-            <span class="emoji">🧠💾</span>
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Linguagens</h4>
-              <!-- Altere percentuais conforme seu nível -->
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>JavaScript</span><span>90%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="90"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Python</span><span>85%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="85"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>TypeScript</span><span>80%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="80"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info"><span>SQL</span><span>75%</span></div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="75"></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Frameworks / Libraries</h4>
-              <div class="skill-bar">
-                <div class="skill-info"><span>React</span><span>95%</span></div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="95"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Node.js</span><span>85%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="85"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Express.js</span><span>80%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="80"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info"><span>Flask</span><span>70%</span></div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="70"></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>DevOps & Ferramentas</h4>
-              <div class="skill-bar">
-                <div class="skill-info"><span>Git</span><span>98%</span></div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="98"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Docker</span><span>90%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="90"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Kubernetes</span><span>80%</span>
-                </div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="80"></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info"><span>CI/CD</span><span>85%</span></div>
-                <div class="skill-progress">
-                  <div class="skill-fill" data-width="85"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="gradient-text">Serviços</span>
-          <span class="emoji">🛠️</span>
-        </h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-code"></i></div>
-            <h3>Desenvolvimento Full Stack</h3>
-            <p>
-              Soluções web completas com React, Node.js, APIs, bancos de dados e
-              UI/UX.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-database"></i></div>
-            <h3>Ciência de Dados</h3>
-            <p>
-              Análise de dados, machine learning, dashboards e insights
-              estratégicos.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fab fa-docker"></i></div>
-            <h3>DevOps & Infraestrutura</h3>
-            <p>
-              Containers, Kubernetes, pipelines CI/CD e infraestrutura
-              automatizada.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>API & Integrações</h3>
-            <p>
-              APIs REST/GraphQL, integrações externas, webhook, microserviços
-              robustos.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-search"></i></div>
-            <h3>Consultoria Técnica</h3>
-            <p>
-              Arquitetura, stack selection, escalabilidade e otimização de
-              performance.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>DataOps & Automação</h3>
-            <p>
-              Pipelines de dados, ETLs, monitoramento e automação de rotinas
-              analíticas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work Section -->
-    <section id="work" class="work">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="gradient-text">Projetos</span>
-          <span class="emoji">🏗️</span>
-        </h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Jotchua Bot</h3>
-            <p>
-              Bot interativo para o aplicativo Discord
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Bot</span>
-              <span class="tag">Discord</span>
-            </div>
-          </div>
-          <div class="project-card">
-            <h3>Zeromath</h3>
-            <p>
-              Aplicativo matemático voltado para o auxílio no ensino de Métodos
-              Numéricos
-            </p>
-            <div class="project-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">Dart</span><span class="tag">Ensino</span>
-            </div>
-          </div>
-          <div class="project-card">
-            <h3>Characters Vault</h3>
-            <p>
-              Jogo digital para criação/coleta de personagens com backend
-              escalável.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">Dart</span>
-              <span class="tag">GameDev</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="gradient-text">Contato</span>
-          <span class="emoji">📬</span>
-        </h2>
-        <div class="contact-content">
-          <form class="contact-form" id="contact-form">
-            <div class="form-group">
-              <label for="name">Nome</label
-              ><input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label
-              ><input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Mensagem</label
-              ><textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Enviar Mensagem
-            </button>
-          </form>
-          <div class="contact-links">
-            <p>Quer agendar um papo?</p>
-            <div class="contact-buttons">
-              <a href="docs/CV_Pt.pdf" target="_blank" class="btn btn-secondary"
-                ><i class="fas fa-file-text"></i> Ver Currículo</a
-              >
-              <a href="mailto:pedrozle@outlook.com" class="btn btn-secondary"
-                ><i class="fas fa-envelope"></i> Enviar e-mail</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="social-links">
-          <a
-            href="https://github.com/pedrozle"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://linkedin.com/in/pedrozle"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a
-            href="https://twitter.com/pedrozle"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </div>
-        <div class="footer-text">
-          <p>
-            &copy; <span id="current-year"></span> João Pedro. Todos os direitos
-            reservados.
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal" data-i18n="hero.kicker">DevOps Engineer • Full-Stack Developer</p>
+          <h1 class="reveal" style="--d: 60ms;" data-i18n="hero.title">João Pedro Nascimento Silveira</h1>
+          <p class="lead reveal" style="--d: 120ms;" data-i18n="hero.lead">
+            I build reliable infrastructure, automate delivery pipelines, and develop scalable web/mobile products.
+            Strong focus on Kubernetes, observability, and clean engineering practices.
           </p>
-          <a href="mailto:pedrozle@outlook.com" class="email-link"
-            >pedrozle@outlook.com</a
-          >
+
+          <div class="cta reveal" style="--d: 180ms;">
+            <a class="btn primary" href="#projects" data-i18n="hero.btn.projects">View Projects</a>
+            <a class="btn" href="#contact" data-i18n="hero.btn.contact">Contact</a>
+          </div>
+
+          <div class="chips reveal" style="--d: 240ms;">
+            <span class="chip" data-i18n="hero.chip.location">Porto Velho, BR</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Docker</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Observability</span>
+          </div>
+
+          <div class="social reveal" style="--d: 300ms;">
+            <a href="mailto:pedrozle@outlook.com">pedrozle@outlook.com</a>
+            <span class="dot">•</span>
+            <a href="https://linkedin.com/in/pedrozle" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/pedrozle" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" style="--d: 160ms;">
+          <div class="card">
+            <div class="card-top">
+              <div class="avatar" aria-hidden="true">JP</div>
+              <div>
+                <p class="card-title" data-i18n="hero.card.available">Available for opportunities</p>
+                <p class="muted" data-i18n="hero.card.subtitle">DevOps • Platform • Full-Stack</p>
+              </div>
+            </div>
+
+            <div class="card-metrics">
+              <div class="metric">
+                <p class="metric-k" data-i18n="hero.card.focus">Focus</p>
+                <p class="metric-v" data-i18n="hero.card.focus.value">Reliability</p>
+              </div>
+              <div class="metric">
+                <p class="metric-k" data-i18n="hero.card.stack">Stack</p>
+                <p class="metric-v" data-i18n="hero.card.stack.value">K8s + CI/CD</p>
+              </div>
+              <div class="metric">
+                <p class="metric-k" data-i18n="hero.card.cloud">Cloud</p>
+                <p class="metric-v" data-i18n="hero.card.cloud.value">AWS / OCI</p>
+              </div>
+            </div>
+
+            <div class="card-actions">
+              <a class="btn small" href="#experience" data-i18n="hero.card.btn.experience">See Experience</a>
+              <a class="btn small ghost" href="#contact" data-i18n="hero.card.btn.hire">Hire Me</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.about">About</h2>
+          <p class="muted" data-i18n="section.about.desc">A quick summary of who I am and what I do.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal" style="--d: 60ms;">
+            <h3 data-i18n="about.profile">Profile</h3>
+            <p data-i18n="about.profile.text">
+              DevOps Engineer and Full-Stack Developer experienced in sustaining and automating mission-critical environments.
+              Hands-on with Docker, Kubernetes, Nutanix, CI/CD (GitLab CI, ArgoCD), and observability (Prometheus, Grafana, Dynatrace, Zabbix).
+              Basic Terraform (IaC). Founder of Ore Software building SaaS and mobile products.
+            </p>
+            <div class="badges">
+              <span class="badge">DevOps</span>
+              <span class="badge">Platform</span>
+              <span class="badge">Full-Stack</span>
+              <span class="badge">SaaS</span>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="--d: 120ms;">
+            <h3 data-i18n="about.highlights">Highlights</h3>
+            <ul class="list">
+              <li data-i18n="about.highlight.1">Managed Kubernetes clusters and Nutanix infrastructure for high availability.</li>
+              <li data-i18n="about.highlight.2">Automated delivery pipelines with GitLab CI and ArgoCD.</li>
+              <li data-i18n="about.highlight.3">Implemented monitoring/observability with Prometheus, Grafana, Dynatrace, Zabbix.</li>
+              <li data-i18n="about.highlight.4">Built web/mobile products with Next.js, Angular, Flutter and APIs.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="assets/js/index.js"></script>
-  </body>
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.skills">Skills</h2>
+          <p class="muted" data-i18n="section.skills.desc">Tools and technologies I use.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills.devops">DevOps & Platform</h3>
+            <div class="tags">
+              <span>Docker</span><span>Kubernetes</span><span>Nutanix</span><span>Rancher</span><span>ArgoCD</span>
+              <span>GitLab CI</span><span>GitHub Actions</span><span>Ansible</span><span>AWX</span><span>Terraform (basic)</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 80ms;">
+            <h3 data-i18n="skills.observability">Observability</h3>
+            <div class="tags">
+              <span>Prometheus</span><span>Grafana</span><span>Dynatrace</span><span>Zabbix</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 160ms;">
+            <h3 data-i18n="skills.backend">Backend & APIs</h3>
+            <div class="tags">
+              <span>Python</span><span>Java</span><span>FastAPI</span><span>Quarkus</span><span>Django</span><span>Fastify</span>
+              <span>REST</span><span>JWT</span><span>OAuth</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 240ms;">
+            <h3 data-i18n="skills.frontend">Frontend & Mobile</h3>
+            <div class="tags">
+              <span>TypeScript</span><span>Angular</span><span>Next.js</span><span>React</span><span>Flutter</span><span>Dart</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 320ms;">
+            <h3 data-i18n="skills.data">Data & Databases</h3>
+            <div class="tags">
+              <span>PostgreSQL</span><span>MongoDB</span><span>Prisma ORM</span><span>SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 400ms;">
+            <h3 data-i18n="skills.cloud">Cloud & Tooling</h3>
+            <div class="tags">
+              <span>AWS</span><span>Oracle Cloud</span><span>Git</span><span>Postman</span><span>Firebase</span><span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.experience">Experience</h2>
+          <p class="muted" data-i18n="section.experience.desc">Where I've worked and what I delivered.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job-meta">
+              <h3 data-i18n="exp.1.title">State Department of Finance — DevOps Engineer</h3>
+              <p class="muted" data-i18n="exp.1.period">Porto Velho, RO • Jun 2025 — Present</p>
+            </div>
+            <ul class="list">
+              <li data-i18n="exp.1.li.1">Administered Nutanix infrastructure and Kubernetes clusters for high availability and resilience.</li>
+              <li data-i18n="exp.1.li.2">Standardized environments using Docker to ensure consistent delivery.</li>
+              <li data-i18n="exp.1.li.3">Created and maintained CI/CD pipelines with GitLab CI and ArgoCD.</li>
+              <li data-i18n="exp.1.li.4">Implemented monitoring/observability with Prometheus, Grafana, Dynatrace, and Zabbix.</li>
+              <li data-i18n="exp.1.li.5">Automated provisioning/configuration with Ansible, Rancher, and basic Terraform (IaC).</li>
+            </ul>
+          </article>
+
+          <article class="job reveal" style="--d: 120ms;">
+            <div class="job-meta">
+              <h3 data-i18n="exp.2.title">State Court of Rondônia — Software Development Intern</h3>
+              <p class="muted" data-i18n="exp.2.period">Porto Velho, RO • Aug 2022 — Aug 2024</p>
+            </div>
+            <ul class="list">
+              <li data-i18n="exp.2.li.1">Built scalable web apps using Angular (frontend) and Quarkus (backend).</li>
+              <li data-i18n="exp.2.li.2">Improved UI/UX to increase efficiency and accessibility.</li>
+              <li data-i18n="exp.2.li.3">Used JWT and OAuth for secure authentication and access control.</li>
+            </ul>
+          </article>
+
+          <article class="job reveal" style="--d: 240ms;">
+            <div class="job-meta">
+              <h3 data-i18n="exp.3.title">Public Defender's Office of Rondônia — Software Development Intern</h3>
+              <p class="muted" data-i18n="exp.3.period">Porto Velho, RO • Jul 2021 — Aug 2021</p>
+            </div>
+            <ul class="list">
+              <li data-i18n="exp.3.li.1">Optimized Django database queries, improving performance and response time.</li>
+            </ul>
+          </article>
+
+          <article class="job reveal" style="--d: 360ms;">
+            <div class="job-meta">
+              <h3 data-i18n="exp.4.title">Public Prosecutor's Office — Administrative Intern</h3>
+              <p class="muted" data-i18n="exp.4.period">Porto Velho, RO • Feb 2016 — Mar 2017</p>
+            </div>
+            <ul class="list">
+              <li data-i18n="exp.4.li.1">Assisted in drafting official letters, memos, and circulars.</li>
+              <li data-i18n="exp.4.li.2">Delivered documents to the appropriate institutions.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.projects">Projects</h2>
+          <p class="muted" data-i18n="section.projects.desc">Selected work — links included.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <h3 data-i18n="project.1.title">Discord Bot</h3>
+              <div class="project-links">
+                <a href="https://pedrozle.github.io/jotchua-bot/" target="_blank" rel="noreferrer">Project Page</a>
+                <span class="dot">•</span>
+                <a href="https://github.com/pedrozle" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+            <p data-i18n="project.1.text">
+              Bot for Discord servers with database support.
+            </p>
+            <div class="tags">
+              <span>Python</span><span>discord.py</span><span>MongoDB</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--d: 120ms;">
+            <div class="project-top">
+              <h3 data-i18n="project.2.title">Zero Math</h3>
+              <div class="project-links">
+                <a href="https://oresoftware.net/projects/zeromath" target="_blank" rel="noreferrer">Project Page</a>
+              </div>
+            </div>
+            <p data-i18n="project.2.text">
+              Mobile app to assist teaching and learning the “Zero of Functions” topic.
+            </p>
+            <div class="tags">
+              <span>Flutter</span><span>Dart</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--d: 240ms;">
+            <div class="project-top">
+              <h3 data-i18n="project.3.title">Ore Software (Holding)</h3>
+              <div class="project-links">
+                <a href="https://oresoftware.net/" target="_blank" rel="noreferrer">Website</a>
+              </div>
+            </div>
+            <p data-i18n="project.3.text">
+              Umbrella brand for Ore Labs (SaaS/apps/web) and Ore Studios (games).
+            </p>
+            <div class="tags">
+              <span>SaaS</span><span>Mobile</span><span>Web</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section id="certs" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.certs">Online Courses & Certificates</h2>
+          <p class="muted" data-i18n="section.certs.desc">Recent training and learning.</p>
+        </div>
+
+        <div class="panel reveal">
+          <ul class="list two-col">
+            <li>Nutanix Kubernetes Platform (NKP) Training (2025) — Nutanix</li>
+            <li>Fundamentals of Intelligent Sensing Platforms for Industry (Aug 2025) — Virtus</li>
+            <li>Ansible for SysAdmin (Jul 2025) — Udemy</li>
+            <li>Dynatrace Foundations (Jul 2025) — Dynatrace</li>
+            <li>Networking Fundamentals for DevOps (Jul 2025) — Udemy</li>
+            <li>Introduction to Spring Framework with Spring Boot (Mar 2025) — DIO</li>
+            <li>Java Language Fundamentals (Feb 2025) — DIO</li>
+            <li>Python Essentials 1 (May 2023) — Cisco Academy</li>
+            <li>Fundamentals of Graphic Design (Apr 2022) — Fundação Bradesco | Virtual School</li>
+            <li>Database Fundamentals (Oct 2021) — Oracle Academy</li>
+            <li>Networking Fundamentals (Oct 2021) — Cisco Academy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATION -->
+    <section class="section alt" id="publication">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.publication">Publication</h2>
+          <p class="muted" data-i18n="section.publication.desc">Scientific publication and keywords.</p>
+        </div>
+
+        <article class="panel reveal">
+          <h3 data-i18n="publication.title">ZeroMath: An application to assist in teaching and learning the Zero of Functions (2024)</h3>
+          <p class="muted" data-i18n="publication.keywords">Keywords: Numerical Methods, Zero of Functions, Educational Application, Interactive Graphs.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="section.contact">Contact</h2>
+          <p class="muted" data-i18n="section.contact.desc">Want to talk? Send a message.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h3 data-i18n="contact.getintouch">Get in touch</h3>
+            <p data-i18n="contact.text">
+              Email is the fastest way. You can also reach me via LinkedIn.
+            </p>
+            <div class="contact-list">
+              <a class="contact-item" href="mailto:pedrozle@outlook.com">
+                <span class="ico" aria-hidden="true">✉</span>
+                <span>pedrozle@outlook.com</span>
+              </a>
+              <a class="contact-item" href="tel:+5569993759611">
+                <span class="ico" aria-hidden="true">☎</span>
+                <span>+55 69 99375-9611</span>
+              </a>
+              <a class="contact-item" href="https://linkedin.com/in/pedrozle" target="_blank" rel="noreferrer">
+                <span class="ico" aria-hidden="true">in</span>
+                <span>linkedin.com/in/pedrozle</span>
+              </a>
+              <a class="contact-item" href="https://github.com/pedrozle" target="_blank" rel="noreferrer">
+                <span class="ico" aria-hidden="true">GH</span>
+                <span>github.com/pedrozle</span>
+              </a>
+            </div>
+
+            <div class="mini">
+              <button class="btn small" type="button" data-copy="pedrozle@outlook.com" data-i18n="contact.copy">Copy email</button>
+              <button class="btn small ghost" type="button" data-download data-i18n="contact.download">Download CV</button>
+            </div>
+          </div>
+
+          <form class="panel reveal" data-contact-form>
+            <h3 data-i18n="contact.message">Message</h3>
+            <label data-i18n="contact.form.name">Name</label>
+            <input name="name" type="text" placeholder="Your name" required />
+            <label data-i18n="contact.form.email">Email</label>
+            <input name="email" type="email" placeholder="you@email.com" required />
+            <label data-i18n="contact.form.message">Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <button class="btn primary" type="submit" data-i18n="contact.form.submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="muted" data-i18n="footer.text" data-year="{year}">© <span id="year"></span> João Pedro Nascimento Silveira • Built with HTML/CSS/JS</p>
+      <a class="to-top" href="#top" data-i18n="footer.totop">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/index.js"></script>
+</body>
 </html>
